@@ -1,0 +1,25 @@
+city_selection_task:
+  description: >
+    Analyze the traveler's preferences, budget, and trip duration to recommend the most suitable cities to visit. 
+    Ensure the selected cities align with interests such as culture, nature, food, or leisure.
+  expected_output: >
+    A list of 2–3 recommended cities with a brief explanation of why each was chosen.
+  agent: city_selection_expert
+
+local_expert_task:
+  description: >
+    For the chosen cities, create a day-by-day itinerary. Include must-visit attractions, 
+    local food recommendations, cultural experiences, and hidden gems. 
+    Ensure the plan fits within the total number of travel days.
+  expected_output: >
+    A structured itinerary for each city, organized by day with recommended activities and dining options.
+  agent: local_expert
+
+travel_concierge_task:
+  description: >
+    For the chosen cities, design a travel logistics plan. Include transport between cities, 
+    rough cost estimates, and reservation suggestions for accommodations and activities. 
+    Consider budget constraints and ensure smooth transitions between locations.
+  expected_output: >
+    A logistics plan containing transportation details, estimated costs, and booking recommendations.
+  agent: travel_concierge
